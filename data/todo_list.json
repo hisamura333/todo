@@ -1,20 +1,9 @@
 {
     "Lists": [
         {
+            "id": 1,
             "name": "読書",
             "priority": 1
-        },
-        {
-            "name": "買い物",
-            "priority": 2
-        },
-        {
-            "name": "掃除",
-            "priority": 4
-        },
-        {
-            "name": "洗濯",
-            "priority": 4
         }
     ]
 }
