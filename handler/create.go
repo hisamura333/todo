@@ -25,9 +25,12 @@ func Create(w http.ResponseWriter, r *http.Request)  {
 
 	json.Unmarshal([]byte(list), &s)
 
-	sNew := task.Task{Name: taskValue, Priority: priorityInt }
+	lastTask := s.Lists[len(s.Lists) - 1]
 
-    s.AddTask(sNew, "data/todo_list.json"
+
+	sNew := task.Task{Id: lastTask.Id+1,Name: taskValue, Priority: priorityInt }
+
+    s.AddTask(sNew, "data/todo_list.json")
 
 	tmpl, err := template.ParseFiles("view/index.html")
 

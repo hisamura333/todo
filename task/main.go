@@ -7,6 +7,7 @@ import (
 )
 
 type Task struct {
+	Id int `json:"id"`
 	Name string `json:"name"`
 	Priority   int   `json:"priority"`
 }
@@ -24,6 +25,14 @@ func (tl *Taskslice)AddTask(task Task, fileName string)  {
 	}
 
 	ioutil.WriteFile(fileName, sJson, os.ModePerm)
+}
 
+func (tl *Taskslice)TodoListUnmershal() error {
+	list, err := ioutil.ReadFile("data/todo_list.json")
+	if err != nil {
+		return err
+	}
 
+	json.Unmarshal([]byte(list), &tl)
+	return nil
 }
