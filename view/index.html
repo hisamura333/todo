@@ -10,12 +10,12 @@
     <li>{{.}}</li>
 {{end}}
 
-{{/*<form action="/login" method="post">*/}}
-{{/*    ユーザ名:<input type="text" name="username">*/}}
-{{/*    パスワード:<input type="password" name="password">*/}}
-{{/*    <input type="submit" value="ログイン">*/}}
-{{/*</form>*/}}
+<p>新規のTODOを追加</p>
+<form action="/" method="post">
+    TODO名:<input type="text" name="task">
+    優先度:<input type="number" name="priority">
+    <input type="submit" value="作成">
+</form>
 
-<a href="/test">もっと読む</a>
 </body>
 </html>
