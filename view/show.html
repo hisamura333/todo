@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>todoアプリ</title>
+</head>
+<body>
+
+{{/*{{range .}}*/}}
+{{/*    <li>*/}}
+{{/*        <a href="show/{{.Id}}" >{{.Name}} {{.Priority}}</a>*/}}
+{{/*        <a href="delete/{{.Id}}" >削除</a>*/}}
+{{/*    </li>*/}}
+
+
+{{/*{{end}}*/}}
+
+<p>詳細</p>
+
+<p>{{.Name}}</p>
+<p>{{.Priority}}</p>
+<p>{{.Details}}</p>
+
+
+<p>詳細を追加、変更</p>
+<form action="/show/{{.Id}}" method="post">
+    詳細:<input type="text" name="details">
+
+    <input type="submit" value="作成">
+</form>
+
+</body>
+</html>
