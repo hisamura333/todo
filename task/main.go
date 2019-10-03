@@ -10,6 +10,7 @@ type Task struct {
 	Id int `json:"id"`
 	Name string `json:"name"`
 	Priority   int   `json:"priority"`
+	Details string `json:"details"`
 }
 
 type Taskslice struct {

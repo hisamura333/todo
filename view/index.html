@@ -7,8 +7,11 @@
 <body>
 
 {{range .}}
-    <li>{{.}}</li>
-    <a href="delete/{{.Id}}" >削除</a>
+    <li>
+      <a href="show/{{.Id}}" >{{.Name}} {{.Priority}}</a>
+      <a href="delete/{{.Id}}" >削除</a>
+    </li>
+
 
 {{end}}
 
